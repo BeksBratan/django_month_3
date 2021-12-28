@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<div>
+    <ul>
+    <p><a href="/add/">Add order</a></p>
+    <p><a href="/add-customer/">Add customer</a></p>
+        {% for i in product %}
+            <li>
+            <h2><a href="/product/{{ i.id }}/">{{ i.name }}</a></h2>
+            <p>{{ i.date_created }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
